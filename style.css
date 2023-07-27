@@ -120,47 +120,36 @@ body {
 }
 
 /* review */
-
-.experiencebox {
-  margin: 10px 5px;
-  padding: 15px;
-  border: 2px solid burlywood;
-}
-
-#reviewhead {
-  font-size: 30px;
-  text-align: center;
-}
-
-.container {
+#form-details {
   display: flex;
   justify-content: space-between;
+  margin: 30px;
+  padding: 80px;
+  border: 1px solid #e1e1e1;
 }
 
-.form-container {
-  border: 1px solid #e60f0f;
-  border-radius: 5px;
-  width: 45%;
-  height: 40vh;
-  margin: 5px;
+#form-details form {
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
-#experienceForm {
-  padding: 10px;
+#form-details form input,
+#form-details form textarea {
+  width: 100%;
+  padding: 12px 15px;
+  outline: none;
+  margin-bottom: 20px;
+  border: 1px solid #e1e1e1;
 }
 
-.reviews-container {
-  width: 45%;
-  height: 40vh;
-  flex: 1;
-  margin: 5px;
-}
-
-.review {
-  border: 1px solid #e4f30a;
-  padding: 10px;
-  margin-bottom: 10px;
-  border-radius: 5px;
+#form-details form button {
+  background-color: #088178;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
 }
 
 /* youtube video  */
@@ -175,6 +164,7 @@ body {
 
 }
 
+/* footer section */
 
 footer {
   background-color: #333;
