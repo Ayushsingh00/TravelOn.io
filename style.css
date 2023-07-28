@@ -53,11 +53,6 @@
   padding: 15px;
 }
 
-
-  
-
-}
-
 #navbar li a:hover {
   color: #f80404;
 }
@@ -127,7 +122,7 @@ body {
 }
 
 #catgories {
-  margin-top: 20px;
+  margin: 30px;
   display: flex;
   justify-content: space-evenly;
 }
