@@ -43,8 +43,52 @@
   font-family: 'Times New Roman', Times, serif;
   color: #fff;
   font-weight: 600;
+  transition: 0.3s ease;
+}
+/*  */
+#navbar li {
+  list-style: none;
+  padding: 0 20px;
+  position: relative;
+  padding: 15px;
 }
 
+
+  
+
+}
+
+#navbar li a:hover {
+  color: #f80404;
+}
+
+#navbar li a:hover,
+#navbar li a:active {
+  color: #ff0505;
+}
+
+#navbar li a.active::after,
+#navbar li a:hover::after {
+  content: "";
+  width: 30%;
+  height: 2px;
+  background: #40ff00;
+  position: absolute;
+  bottom: -4px;
+  left: 20px;
+
+}
+
+#mobile {
+  display: none;
+  align-items: center;
+}
+
+#close {
+  display: none;
+}
+
+/*  */
 #cover {
   background-image: url(pier-lake-hallstatt-austria.jpg);
   background-size: cover;
@@ -95,6 +139,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  box-shadow: 2px 2px 10px 12px #3709dca4;
 }
 
 .type img {
@@ -119,28 +164,42 @@ body {
   text-decoration: none;
 }
 
-/* review */
+/* youtube video  */
+.video {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.videocontainer {
+  margin: 20px;
+}
+
+/* user input */
 #form-details {
   display: flex;
-  justify-content: space-between;
+  width: 90%;
+  height: auto;
+  justify-content: center;
   margin: 30px;
-  padding: 80px;
-  border: 1px solid #e1e1e1;
+  padding: 50px;
+  border: none;
 }
 
 #form-details form {
-  width: 65%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  box-shadow: 2px 2px 10px 12px rgba(5, 10, 75, 0.565);
 }
 
 #form-details form input,
 #form-details form textarea {
-  width: 100%;
+  width: 80%;
   padding: 12px 15px;
   outline: none;
-  margin-bottom: 20px;
+  margin: 20px;
   border: 1px solid #e1e1e1;
 }
 
@@ -150,18 +209,75 @@ body {
   padding: 10px 20px;
   border: none;
   cursor: pointer;
+  margin-left: 20px;
+  margin-bottom: 20px;
 }
 
-/* youtube video  */
-.video {
+#form-details fieldset {
+  border: none;
+  margin-top: 20px;
+}
+
+#form-details legend {
+  text-align: center;
+  font-size: 36px;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 800;
+}
+
+/* user review */
+#user-review {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
+  flex-direction: column;
+  width: auto;
+  height: auto;
+  margin: 30px;
+  padding: 50px;
+  box-shadow: 2px 2px 10px 12px rgba(5, 10, 75, 0.565);
 }
 
-.videocontainer {
-  margin: 15px;
+.person {
+  width: 100%;
+  height: 45vh;
+  display: flex;
+  justify-content: space-between;
+}
 
+.review-image {
+  width: 50%;
+  display: flex;
+  overflow: auto;
+  scroll-behavior: smooth;
+  margin: 15px;
+  padding: 15px;
+}
+
+.review-text {
+  width: 50%;
+  line-height: 30px;
+  text-align: justify;
+  margin: 15px;
+  padding: 15px;
+  overflow: auto;
+  box-shadow: 2px 2px 10px 12px rgba(5, 10, 75, 0.565);
+}
+
+.person img {
+  width: 250px;
+  height: 200px;
+  margin: 0 10px;
+  border-radius: 15px;
+}
+
+.review-text h2{
+  font-size:medium;
+  font-weight: 100;
+  font-style: italic;
+  padding-left: 30px;
+}
+.review-text p{
+  font-style: italic;
 }
 
 /* footer section */
@@ -200,15 +316,16 @@ footer {
   margin: 0 5px;
 }
 
-@media (max-width:799px){
-  #catgories{
+@media (max-width:799px) {
+  #catgories {
     display: flex;
     overflow: scroll;
     justify-content: space-evenly;
     margin-left: 15px;
     margin-right: 15px;
   }
-  .type{
+
+  .type {
     margin: 15px;
   }
 }
