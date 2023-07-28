@@ -1,1 +1,1 @@
-https://ayushsingh00.github.io/TravelOn/
+https://ayushsingh00.github.io/TravelOn.io/
